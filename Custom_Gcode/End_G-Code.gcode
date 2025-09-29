@@ -5,7 +5,8 @@ G0 Z10 F6000 ; Lift print head 10mm in Z to clear print
 G90 ; switch back to absolute positioning
 G0 X0 Y200 F10200; present bed
 G91
-;M109 R140 ; Reduce hot-end temperature and wait. Try to do a cold-pull
+; Reduce hot-end temperature and wait. Try to do a cold-pull
+M109 R180 ; PETg
 G1 E-30.0 F1200 ; retract filament
 M220 S100 ; reset speed factor to 100%
 M221 S100 ; reset extruder factor to 100%
