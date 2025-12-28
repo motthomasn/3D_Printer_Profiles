@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<profile name="Prusa_i3_MK3_Filamentive_rPETG_0.6mm" version="2025-09-13 21:37:05" app="S3D-Software 5.1.2" technology="fff">
+<profile name="Prusa_i3_MK3_Filamentive_rPETG_0.6mm_Claude" version="2025-10-15 22:04:57" app="S3D-Software 5.1.2" technology="fff">
   <baseProfile>Prusa Research Original Prusa i3 MK3</baseProfile>
   <extruder name="Primary Extruder">
     <toolheadNumber>
@@ -16,15 +16,15 @@
       <option value="automatic" displayValue="Automatic"/>
       <option value="manual" displayValue="Manual" selected="1"/>
     </extrusionWidthMode>
-    <extrusionWidth>0.65000</extrusionWidth>
+    <extrusionWidth>0.70000</extrusionWidth>
     <useRetraction>1</useRetraction>
-    <retractDistance>0.80000</retractDistance>
+    <retractDistance>2.00000</retractDistance>
     <extraRestartDistance>0.00000</extraRestartDistance>
     <retractVerticalLift>0.60000</retractVerticalLift>
-    <retractSpeed>2100.00000</retractSpeed>
-    <useCoasting>0</useCoasting>
+    <retractSpeed>2400.00000</retractSpeed>
+    <useCoasting>1</useCoasting>
     <coastingDistance>0.20000</coastingDistance>
-    <useWiping>0</useWiping>
+    <useWiping>1</useWiping>
     <wipingDistance>5.00000</wipingDistance>
     <speedMaxFlowRate>900.00000</speedMaxFlowRate>
     <toolheadOffsetX>0.00000</toolheadOffsetX>
@@ -37,8 +37,8 @@
     <option value="Primary Extruder" selected="1"/>
   </primaryExtruder>
   <layerHeight>0.30000</layerHeight>
-  <topSolidLayers>3</topSolidLayers>
-  <bottomSolidLayers>3</bottomSolidLayers>
+  <topSolidLayers>5</topSolidLayers>
+  <bottomSolidLayers>5</bottomSolidLayers>
   <outlinePerimeters>3</outlinePerimeters>
   <useVaseMode>0</useVaseMode>
   <useAdaptiveLayerHeights>0</useAdaptiveLayerHeights>
@@ -138,7 +138,7 @@
   </sparseInfillExtruder>
   <sparseInfillPattern>
     <option value="aligned" displayValue="Aligned"/>
-    <option value="rectilinear" displayValue="Rectilinear" selected="1"/>
+    <option value="rectilinear" displayValue="Rectilinear"/>
     <option value="grid" displayValue="Grid"/>
     <option value="triangular" displayValue="Triangular"/>
     <option value="sinusoidal" displayValue="Sinusoidal"/>
@@ -147,10 +147,10 @@
     <option value="full_honeycomb" displayValue="Full Honeycomb"/>
     <option value="octahedral" displayValue="Octahedral"/>
     <option value="cubic" displayValue="Cubic"/>
-    <option value="gyroid" displayValue="Gyroid"/>
+    <option value="gyroid" displayValue="Gyroid" selected="1"/>
   </sparseInfillPattern>
   <sparseInfillRotation>0</sparseInfillRotation>
-  <sparseInfillPercentage>100</sparseInfillPercentage>
+  <sparseInfillPercentage>20</sparseInfillPercentage>
   <sparseInfillExtrusionWidthPercentage>100</sparseInfillExtrusionWidthPercentage>
   <sparseInfillCombinedLayers>1</sparseInfillCombinedLayers>
   <denseInfillLayers>0</denseInfillLayers>
@@ -188,19 +188,19 @@
     <option value="triangular" displayValue="Triangular"/>
   </sparseSupportInfillPattern>
   <sparseSupportInfillRotation>45</sparseSupportInfillRotation>
-  <sparseSupportInfillPercentage>50</sparseSupportInfillPercentage>
+  <sparseSupportInfillPercentage>15</sparseSupportInfillPercentage>
   <sparseSupportOutlines>0</sparseSupportOutlines>
   <sparseSupportCombinedLayers>1</sparseSupportCombinedLayers>
-  <upperDenseSupportLayers>0</upperDenseSupportLayers>
-  <lowerDenseSupportLayers>0</lowerDenseSupportLayers>
+  <upperDenseSupportLayers>3</upperDenseSupportLayers>
+  <lowerDenseSupportLayers>3</lowerDenseSupportLayers>
   <denseSupportExtruder>
     <option value="Primary Extruder" selected="1"/>
   </denseSupportExtruder>
-  <denseSupportInfillPercentage>55</denseSupportInfillPercentage>
+  <denseSupportInfillPercentage>60</denseSupportInfillPercentage>
   <denseSupportExtraExpansion>0.00000</denseSupportExtraExpansion>
   <baseSupportLayers>0</baseSupportLayers>
   <supportInflationDistance>0.80000</supportInflationDistance>
-  <supportHorizontalPartOffset>0.60000</supportHorizontalPartOffset>
+  <supportHorizontalPartOffset>0.80000</supportHorizontalPartOffset>
   <supportUpperSeparationLayers>1</supportUpperSeparationLayers>
   <supportLowerSeparationLayers>1</supportLowerSeparationLayers>
   <temperatureController name="Primary Extruder">
@@ -245,8 +245,8 @@
     </temperatureType>
     <stabilizeAtStartup>1</stabilizeAtStartup>
     <temperatureSetpoints>
-      <option value="1|85"/>
-      <option value="2|90"/>
+      <option value="1|75"/>
+      <option value="2|80"/>
     </temperatureSetpoints>
     <useIdleCooldown>0</useIdleCooldown>
     <cooldownTemperature>150</cooldownTemperature>
@@ -269,7 +269,10 @@
     <blipFanToFullPower>0</blipFanToFullPower>
     <fanSetpoints>
       <option value="1|0"/>
-      <option value="4|20"/>
+      <option value="2|10"/>
+      <option value="3|20"/>
+      <option value="4|30"/>
+      <option value="5|40"/>
     </fanSetpoints>
     <increaseFanForQuickLayers>1</increaseFanForQuickLayers>
     <fanMaxQuickLayerTime>45.00000</fanMaxQuickLayerTime>
@@ -277,13 +280,13 @@
     <maxQuickLayerFanSpeedPercentage>100</maxQuickLayerFanSpeedPercentage>
   </fan>
   <defaultPrintSpeed>3300.00000</defaultPrintSpeed>
-  <outerPerimeterSpeedPercentage>80</outerPerimeterSpeedPercentage>
+  <outerPerimeterSpeedPercentage>60</outerPerimeterSpeedPercentage>
   <innerPerimeterSpeedPercentage>80</innerPerimeterSpeedPercentage>
   <topLayerSpeedPercentage>50</topLayerSpeedPercentage>
   <solidInfillSpeedPercentage>80</solidInfillSpeedPercentage>
   <sparseSupportSpeedPercentage>80</sparseSupportSpeedPercentage>
   <denseSupportSpeedPercentage>70</denseSupportSpeedPercentage>
-  <travelSpeedXY>10800.00000</travelSpeedXY>
+  <travelSpeedXY>7500.00000</travelSpeedXY>
   <travelSpeedZ>1002.00000</travelSpeedZ>
   <reduceSpeedForQuickLayers>1</reduceSpeedForQuickLayers>
   <speedMaxQuickLayerTime>20.00000</speedMaxQuickLayerTime>
@@ -432,7 +435,7 @@
   <mirrorVisualY>1</mirrorVisualY>
   <mirrorVisualZ>0</mirrorVisualZ>
   <machineBackgroundModel></machineBackgroundModel>
-  <startingScript>; Last updated 20190412|M115 U3.7.0 ; tell printer latest fw version|M204 R1250 ; sets retract acceleration (R) mm/sec^2||; Set initial warmup temps|M104 S160 ; set extruder no-ooze temp|M140 S65  ; set bed PINDA warmup temp|G21 ; set units to millimeters|G90 ; use absolute positioning||; Nozzle warmup routine|M109 ; wait for extruder no-ooze warmup temp before mesh bed leveling| cool hot PINDA|M300 S40 P10 ; chirp|G28 W ; home all without mesh bed level||; PINDA warmup routine|M300 S40 P10 ; chirp|G0 Z3; Raise nozzle before move|G0 X125 Y210 F10200; Move nozzle to PINDA warming position|G0 Z0.10 F10200; Lower nozzle to PINDA warming position|M860 S35 ; wait for PINDA temp to stabilize|G0 Z3; Raise nozzle before move|M300 S40 P10 ; chirp|G80 ; mesh bed leveling|G0 Z3; Raise nozzle to avoid denting bed while nozzle heats|M140 S[bed0_temperature] ; set bed final temp||; Final warmup routine|M190 S[bed0_temperature] ; wait for bed final temp|M104 S[extruder0_temperature] T0 ; set extruder final temp|M109 S[extruder0_temperature] T0 ; wait for extruder final temp||; Prime line routine|M300 S25 P10 ; chirp|G0 Z-3; Restore nozzle position|M82  ; extruder absolute mode|G92 E0.0 ; reset extrusion distance|G1 Y-3.0 F1000.0 ; go outside print area|G1 X60.0 E9.0  F1000.0 ; priming|G1 X100.0 E12.5  F1000.0 ; priming||; Final print adjustments|M900 K32 ; Linear advance K factor for PLA 0.2mm layer height</startingScript>
+  <startingScript>M115 U3.7.0 ; tell printer latest fw version|M204 R1250 ; sets retract acceleration (R) mm/sec^2||; Set initial warmup temps|M104 S160 ; set extruder no-ooze temp|M140 S65  ; set bed PINDA warmup temp|G21 ; set units to millimeters|G90 ; use absolute positioning||; Nozzle warmup routine|M109 ; wait for extruder no-ooze warmup temp before mesh bed leveling|M300 S40 P10 ; chirp|G28 W ; home all without mesh bed level||; PINDA warmup routine|M300 S40 P10 ; chirp|G0 Z3; Raise nozzle before move|G0 X125 Y210 F10200; Move nozzle to PINDA warming position|G0 Z0.10 F10200; Lower nozzle to PINDA warming position|M860 S35 ; wait for PINDA temp to stabilize|G0 Z3; Raise nozzle before move|M300 S40 P10 ; chirp|G80 ; mesh bed leveling|G0 Z3; Raise nozzle to avoid denting bed while nozzle heats|;M140 S{first_layer_bed_temperature[0]} ; set bed final temp, Prusa Slicer|M140 S[bed0_temperature] ; set bed final temp, Simplify 3D||; Final warmup routine|;M190 S{first_layer_bed_temperature[0]} ; wait for bed final temp, Prusa Slicer|;M104 S{first_layer_temperature[0]} T0 ; set extruder final temp, Prusa Slicer|;M109 S{first_layer_temperature[0]} T0 ; wait for extruder final temp, Prusa Slicer|M190 S[bed0_temperature] ; wait for bed final temp, Simplify 3D|M104 S[extruder0_temperature] T0 ; set extruder final temp, Simplify 3D|M109 S[extruder0_temperature] T0 ; wait for extruder final temp, Simplify 3D||; Prime line routine|M300 S25 P10 ; chirp|G0 Z-3; Restore nozzle position|M82  ; extruder absolute mode|G92 E0.0 ; reset extrusion distance|G1 Y-3.0 F1000.0 ; go outside print area|G1 X60.0 E9.0  F1000.0 ; priming|G1 X100.0 E12.5  F1000.0 ; priming||; Final print adjustments|M900 K32 ; Linear advance K factor for PLA 0.2mm layer height</startingScript>
   <preLayerChangeScript></preLayerChangeScript>
   <postLayerChangeScript></postLayerChangeScript>
   <preRetractionScript></preRetractionScript>
@@ -440,15 +443,15 @@
   <preToolChangeScript></preToolChangeScript>
   <postToolChangeScript></postToolChangeScript>
   <processChangeScript></processChangeScript>
-  <endingScript>; Last updated 20190414|G4 ; wait|G91 ; switch to relative positioning|G1 E-3 F4800; retract quickly to avoid ooze|G0 Z10 F6000 ; Lift print head 10mm in Z to clear print|G90 ; switch back to absolute positioning|G0 X0 Y200 F10200; present bed|M220 S100 ; reset speed factor to 100%|M221 S100 ; reset extruder factor to 100%|M106 S0 ; turn off cooling fan|M104 S0 ; turn off extruder|M140 S0 ; turn off bed|G1 X0 Y200 ; part removal|M84 ; disable motors|M300 S100 P10 ; chirp</endingScript>
+  <endingScript>G4 ; wait|G91 ; switch to relative positioning|G1 E-3 F4800; retract quickly to avoid ooze|G0 Z10 F6000 ; Lift print head 10mm in Z to clear print|G90 ; switch back to absolute positioning|G0 X0 Y200 F10200; present bed|G91|;M109 R140 ; Reduce hot-end temperature and wait. Try to do a cold-pull|G1 E-30.0 F1200 ; retract filament|M220 S100 ; reset speed factor to 100%|M221 S100 ; reset extruder factor to 100%|M106 S0 ; turn off cooling fan|M104 S0 ; turn off extruder|M140 S0 ; turn off bed|M84 ; disable motors|M300 S100 P10 ; chirp</endingScript>
   <postProcessingScript></postProcessingScript>
   <useBridging>1</useBridging>
   <bridgingThresholdArea>50.00000</bridgingThresholdArea>
   <bridgingInfillExtraExpansion>0.00000</bridgingInfillExtraExpansion>
-  <bridgingExtrusionModifier>100</bridgingExtrusionModifier>
-  <bridgingSpeedModifier>110</bridgingSpeedModifier>
+  <bridgingExtrusionModifier>95</bridgingExtrusionModifier>
+  <bridgingSpeedModifier>55</bridgingSpeedModifier>
   <overrideFanSpeedForBridging>1</overrideFanSpeedForBridging>
-  <bridgingFanSpeedPercentage>80</bridgingFanSpeedPercentage>
+  <bridgingFanSpeedPercentage>100</bridgingFanSpeedPercentage>
   <useFixedBridgingAngle>0</useFixedBridgingAngle>
   <fixedBridgingAngle>0</fixedBridgingAngle>
   <applyBridgingToPerimeters>0</applyBridgingToPerimeters>
@@ -482,7 +485,7 @@
   <useRetractionMinExtrusion>0</useRetractionMinExtrusion>
   <retractionMinExtrusion>3.00000</retractionMinExtrusion>
   <onlyVerticalLiftOnTopLayers>0</onlyVerticalLiftOnTopLayers>
-  <retractWhileWiping>0</retractWhileWiping>
+  <retractWhileWiping>1</retractWhileWiping>
   <wipingMode>
     <option value="outer_perimeter" displayValue="Wipe Outer Perimeters Only" selected="1"/>
     <option value="any_perimeter" displayValue="Wipe Inner and Outer Perimeters"/>
