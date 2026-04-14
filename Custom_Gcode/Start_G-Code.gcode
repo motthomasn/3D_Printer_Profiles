@@ -43,4 +43,7 @@ G1 X60.0 E9.0  F1000.0 ; priming
 G1 X100.0 E12.5  F1000.0 ; priming
 
 ; Final print adjustments
-M900 K32 ; Linear advance K factor for PLA 0.2mm layer height
+
+; Linear advance (uncomment as needed)
+;M900 K32 ; Linear advance K factor for PLA 0.2mm layer height
+;M900 K0.025 ; LA1.5 K factor for rPETG 36mm/s @ 1000mm/s2
