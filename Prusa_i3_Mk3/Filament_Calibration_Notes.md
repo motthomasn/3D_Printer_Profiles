@@ -20,3 +20,14 @@ Best at 0.03
 Best at 0.025
 
 Chose 0.025 for best all-round
+
+## Flow ratio
+
+Base flow: 0.98
+Best quality: -0.01
+
+## Retraction
+
+Tested 0-2mm in 0.1mm.  
+No large difference in stringing. Possible benefit around 0.2-0.3mm.
+
