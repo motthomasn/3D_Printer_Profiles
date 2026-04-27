@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<profile name="Prusa_i3_MK3_Filamentive_rPETG_0.6mm_Claude" version="2026-04-14 21:24:22" app="S3D-Software 5.1.2" technology="fff">
+<profile name="Prusa_i3_MK3_Filamentive_rPETG_0.6mm_Claude" version="2026-04-27 21:17:00" app="S3D-Software 5.1.2" technology="fff">
   <baseProfile>Prusa Research Original Prusa i3 MK3</baseProfile>
   <extruder name="Primary Extruder">
     <toolheadNumber>
@@ -11,7 +11,7 @@
       <option value="5" displayValue="Tool 5"/>
     </toolheadNumber>
     <nozzleDiameter>0.60000</nozzleDiameter>
-    <extrusionMultiplier>0.97000</extrusionMultiplier>
+    <extrusionMultiplier>0.98000</extrusionMultiplier>
     <extrusionWidthMode>
       <option value="automatic" displayValue="Automatic"/>
       <option value="manual" displayValue="Manual" selected="1"/>
@@ -282,7 +282,7 @@
   <defaultPrintSpeed>3300.00000</defaultPrintSpeed>
   <outerPerimeterSpeedPercentage>60</outerPerimeterSpeedPercentage>
   <innerPerimeterSpeedPercentage>80</innerPerimeterSpeedPercentage>
-  <topLayerSpeedPercentage>50</topLayerSpeedPercentage>
+  <topLayerSpeedPercentage>30</topLayerSpeedPercentage>
   <solidInfillSpeedPercentage>80</solidInfillSpeedPercentage>
   <sparseSupportSpeedPercentage>80</sparseSupportSpeedPercentage>
   <denseSupportSpeedPercentage>70</denseSupportSpeedPercentage>
@@ -409,9 +409,9 @@
     <option value="rectangular" displayValue="Rectangular" selected="1"/>
     <option value="cylindrical" displayValue="Cylindrical"/>
   </buildVolumeShape>
-  <buildVolumeX>200.00000</buildVolumeX>
-  <buildVolumeY>200.00000</buildVolumeY>
-  <buildVolumeZ>200.00000</buildVolumeZ>
+  <buildVolumeX>250.00000</buildVolumeX>
+  <buildVolumeY>210.00000</buildVolumeY>
+  <buildVolumeZ>210.00000</buildVolumeZ>
   <buildVolumeDiameter>200.00000</buildVolumeDiameter>
   <originOffsetX>0.00000</originOffsetX>
   <originOffsetY>0.00000</originOffsetY>
@@ -448,8 +448,8 @@
   <useBridging>1</useBridging>
   <bridgingThresholdArea>50.00000</bridgingThresholdArea>
   <bridgingInfillExtraExpansion>0.00000</bridgingInfillExtraExpansion>
-  <bridgingExtrusionModifier>95</bridgingExtrusionModifier>
-  <bridgingSpeedModifier>55</bridgingSpeedModifier>
+  <bridgingExtrusionModifier>150</bridgingExtrusionModifier>
+  <bridgingSpeedModifier>50</bridgingSpeedModifier>
   <overrideFanSpeedForBridging>1</overrideFanSpeedForBridging>
   <bridgingFanSpeedPercentage>100</bridgingFanSpeedPercentage>
   <useFixedBridgingAngle>0</useFixedBridgingAngle>
